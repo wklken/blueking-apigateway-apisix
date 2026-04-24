@@ -1,0 +1,103 @@
+src/ops/nginx-health-check.sh
+  de12855384c7c21d 554-772,1194-1391,1393-1398,1400-1412,1790,1803-1925,1971-2040,2182-2206,2279-2291,2697
+  1ebd8ae8e1d18ebc 2868
+  261bf6a6efc6cec4 27-31,449-487,776-937,953-972,974-1038,1794-1801,1933-1956,2107-2150,2258-2275,2304-2482,2709
+  af8c0f2166f649e4 16,61,938-952,973,1392,1399,1518-1529,1970
+  c8ced1a767fa7c16 2152-2157
+Dockerfile
+  h_9e143da0eb081a 41-43
+src/ops/run-check.sh
+  h_9e143da0eb081a 3
+  1cfee3e959731df1 4-5
+  de12855384c7c21d 1-2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.2",
+  "base_commit_sha": "8c9f383afbf3dd7cad9a50cafc2b0f1b9719fd27",
+  "prompts": {
+    "1cfee3e959731df1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dbd54-7ff7-7ec2-b773-8c055e711e9b",
+        "model": "gpt-5.4"
+      },
+      "human_author": "wklken",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 2,
+      "accepted_lines": 2,
+      "overriden_lines": 1
+    },
+    "1ebd8ae8e1d18ebc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dbd61-40b4-7c40-b1f9-a1221532b146",
+        "model": "unknown"
+      },
+      "human_author": "wklken",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 1,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    },
+    "261bf6a6efc6cec4": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "bcde8fef-b870-49d8-908d-9c90a818d4f0",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "wklken",
+      "messages": [],
+      "total_additions": 336,
+      "total_deletions": 45,
+      "accepted_lines": 329,
+      "overriden_lines": 0
+    },
+    "af8c0f2166f649e4": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dbd5e-9fe0-7d03-b877-d5eee67eb628",
+        "model": "gpt-5.4"
+      },
+      "human_author": "wklken",
+      "messages": [],
+      "total_additions": 33,
+      "total_deletions": 14,
+      "accepted_lines": 33,
+      "overriden_lines": 0
+    },
+    "c8ced1a767fa7c16": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dbd4a-b6c9-7b20-a68f-f3eb6e5d7fae",
+        "model": "unknown"
+      },
+      "human_author": "wklken",
+      "messages": [],
+      "total_additions": 6,
+      "total_deletions": 0,
+      "accepted_lines": 6,
+      "overriden_lines": 0
+    },
+    "de12855384c7c21d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019dba3b-99a4-7103-bb9f-4906548897af",
+        "model": "gpt-5.4"
+      },
+      "human_author": "wklken",
+      "messages": [],
+      "total_additions": 377,
+      "total_deletions": 76,
+      "accepted_lines": 371,
+      "overriden_lines": 0
+    }
+  },
+  "humans": {
+    "h_9e143da0eb081a": {
+      "author": "wklken"
+    }
+  }
+}
