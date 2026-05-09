@@ -1,0 +1,17 @@
+Dockerfile
+  h_9e143da0eb081a 41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "6a3bd36e80c253b8f6678e5e8b7926f1cf72a421",
+  "prompts": {},
+  "humans": {
+    "h_2ed7cc0c587d3d": {
+      "author": "wklken <wklken@gmail.com>"
+    },
+    "h_9e143da0eb081a": {
+      "author": "wklken"
+    }
+  }
+}
