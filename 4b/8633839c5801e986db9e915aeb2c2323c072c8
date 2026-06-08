@@ -1,0 +1,19 @@
+LICENSE.txt
+  s_04915cf94a5811::t_f8a55636fd073b 2
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "4b8633839c5801e986db9e915aeb2c2323c072c8",
+  "prompts": {},
+  "sessions": {
+    "s_04915cf94a5811": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "e73f373a-280f-43c6-a218-3ad37806b3c8",
+        "model": "gpt-5-mini"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
