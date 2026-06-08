@@ -1,0 +1,417 @@
+src/apisix/tests/test-bk-delete-cookie.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-mock.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-cors.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-legacy-invalid-params.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-cache/test-access-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-mock.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-request-id.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-real-ip.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-delete-cookie.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-components/bklogin.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-stage-context.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-access-token-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-auth-verify/test-app-account-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-username-required.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-cache/app-account.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-stage-rate-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-test.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-request-body-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-auth-params.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-user-restriction.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-example.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-jwt.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-backend-context.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/busted_runner.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-username-required.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-break-recursive-call.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-response-check.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-backend-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-auth-verify/test-legacy-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/signature.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/errorx.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-define/context-api-bkauth.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-legacy-invalid-params.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-oauth2-protected-resource.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-cache/test-user-tenant-info.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-components/test-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-access-token-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-core/test-upstream.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-cache/test-bk-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-backend-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-oauth2-protected-resource.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-break-recursive-call.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-oauth2-verify.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-resource-context.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-concurrency-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/oauth2.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-status-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-cache/app-tenant-info.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-default-tenant.lua
+  s_04915cf94a5811::t_916e072334d363 5
+src/apisix/t/bk-00.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-mock.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/app-account-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-status-rewrite.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-core/test-errorx.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-debug.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-cache/test-jwt-key.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-define/access-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/cookie.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/auth-params.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-resource-header-rewrite.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/proxy_phases.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-stage-global-rate-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-user-restriction.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-rate-limit/test-init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-core-config.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-log-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-oauth2-protected-resource.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-ip-restriction.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-resource-header-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-components/test-bklogin.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-concurrency-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-core/test-string.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-validate.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-jwt.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-cache/init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-resource-rate-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-stage-header-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-stage-rate-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/access-token-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-user-restriction.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-resource-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-default-tenant.lua
+  s_04915cf94a5811::t_916e072334d363 5
+src/apisix/tests/test-bk-verified-user-exempted-apps.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-cache-fallback/init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-cache/access-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-stage-global-rate-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-auth-verify/legacy-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/inner-jwt-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-request-id.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-core/test-request.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-proxy-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-ip-restriction.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/request.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-delete-sensitive.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/busted_helper.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-real-ip.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-router.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/jwt-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-cache/test-app-account.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/url.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-stage-header-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-inner-jwt-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-cache/test-cookie.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-define/test-user.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-tenant-validate.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-components/bkauth.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-not-found-handler.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-response-check.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-signature.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-stage-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/hmac.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-traffic-label.t
+  s_04915cf94a5811::t_916e072334d363 5
+src/apisix/typing.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-auth-verify.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-core-oauth2.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-auth-verify/test-legacy-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-oauth2-audience-validate.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-oauth2-verify.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-proxy-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-demo.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-define/user.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-components/ssm.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-jwt-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-core/test-url.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-delete-sensitive.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-access-token-source.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-cors.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-access-token-source.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-components/test-bkuser.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-real-ip.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-define/app.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-default-tenant.t
+  s_04915cf94a5811::t_916e072334d363 5
+src/apisix/plugins/bk-cache/jwt-key.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-error-wrapper.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-components/utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-components/bk-apigateway-core.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-stage-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-delete-cookie.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-core/test-hmac.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-components/bkuser.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-auth-verify.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-oauth2-audience-validate.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-opentelemetry.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-oauth2-verify.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-status-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-tenant-validate.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-username-required.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-lrucache.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-resource-header-rewrite.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-stage-header-rewrite.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-resource-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/upstream.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-cache/user-tenant-info.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-components/test-ssm.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-rate-limit/init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-auth-validate.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-error-wrapper.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-permission.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-cache/oauth2-access-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/string.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-log-context.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-request-body-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/tests/bk-define/test-app.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-define/context-resource-bkauth.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-resource-rate-limit.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-cache-fallback/test-init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-delete-sensitive.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-components/test-bkauth.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-request-id.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-opentelemetry.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/jwt-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-tenant-verify.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/init.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-traffic-label.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-app-account-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-define/test-context-resource-bkauth.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-rate-limit/rate-limit-redis.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-auth-verify/access-token-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-repl-debugger.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-legacy-invalid-params.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-access-token-source.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-core/config.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-define/test-access-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-log-context.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-cache/test-app-tenant-info.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-define/test-context-api-bkauth.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-auth-verify/app-account-utils.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-tenant-verify.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-oauth2-audience-validate.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/bk-auth-verify/test-jwt-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/plugins/bk-verified-user-exempted-apps.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-permission.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/t/bk-response-check.t
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-cache/bk-token.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/editions/ee/plugins/bk-auth-verify/legacy-verifier.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-auth-validate.lua
+  s_04915cf94a5811::t_916e072334d363 4
+src/apisix/tests/test-bk-debug.lua
+  s_04915cf94a5811::t_916e072334d363 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "e2678a08faf169cd4e6094803654a9300884db40",
+  "prompts": {},
+  "sessions": {
+    "s_04915cf94a5811": {
+      "agent_id": {
+        "tool": "github-copilot",
+        "id": "e73f373a-280f-43c6-a218-3ad37806b3c8",
+        "model": "gpt-5-mini"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
