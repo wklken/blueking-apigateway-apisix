@@ -1,0 +1,35 @@
+src/apisix/tests/test-bk-error-wrapper.lua
+  s_802d279be876fa::t_0c161ce325ce04 604,615-616
+src/apisix/plugins/bk-error-wrapper.lua
+  s_802d279be876fa::t_dce9b180ad1116 131-136
+  s_802d279be876fa::t_5f5bd9d29beea7 121-130
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.1",
+  "base_commit_sha": "12219368b4faf331e926c78c74e13e9f4bd2e37b",
+  "prompts": {
+    "ec118c2670e9f081": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019db437-7676-78e2-a1cb-86d3dfcae410",
+        "model": "gpt-5.4"
+      },
+      "human_author": "wklken <wklken@gmail.com>",
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  },
+  "sessions": {
+    "s_802d279be876fa": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e6354-fe87-7361-8af9-c1af98e58eab",
+        "model": "gpt-5.5"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}

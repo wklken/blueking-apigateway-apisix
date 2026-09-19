@@ -1,0 +1,14 @@
+src/apisix/editions/ee/plugins/bk-components/bklogin.lua
+  h_2ed7cc0c587d3d 124-127
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "03a508d1f8a3fc4490f532f80e4a7bab67b71e7f",
+  "prompts": {},
+  "humans": {
+    "h_2ed7cc0c587d3d": {
+      "author": "wklken <wklken@gmail.com>"
+    }
+  }
+}

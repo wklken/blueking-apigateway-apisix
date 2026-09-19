@@ -1,0 +1,14 @@
+src/apisix/plugins/bk-auth-verify.lua
+  h_2ed7cc0c587d3d 158-175
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.6",
+  "base_commit_sha": "b9a1d81800bcaa3cbb28a0eebd7f9594d43a7d74",
+  "prompts": {},
+  "humans": {
+    "h_2ed7cc0c587d3d": {
+      "author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
