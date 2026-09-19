@@ -1,0 +1,21 @@
+src/apisix/t/bk-prometheus-key-index.t
+  s_e66bf9ff298173::t_e888a888fa3ddd 249-365
+src/build/patches/009_prometheus_expired_readd_incremental_sync.patch
+  s_e66bf9ff298173::t_fd4f92e6911231 39-47,58
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "596297c7cdf63492dd786be885f4ed36f1287726",
+  "prompts": {},
+  "sessions": {
+    "s_e66bf9ff298173": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0ad24-038f-7bd1-a123-1c08be62f8e6",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "wklken <wklken@gmail.com>"
+    }
+  }
+}
