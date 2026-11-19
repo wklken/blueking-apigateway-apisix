@@ -456,6 +456,36 @@ describe(
         context(
             "verify_oauth2_access_token", function()
                 it(
+                    "should reject introspection responses without a boolean active state", function()
+                        for _, data in ipairs({ {}, { active = "false" }, { active = require("cjson.safe").null } }) do
+                            response = {
+                                status = 200,
+                                body = core.json.encode(data),
+                            }
+
+                            local result, err = bkauth.verify_oauth2_access_token("fake-token")
+
+                            assert.is_nil(result)
+                            assert.is_string(err)
+                        end
+                    end
+                )
+
+                it(
+                    "should accept an inactive token without optional error details", function()
+                        response = {
+                            status = 200,
+                            body = core.json.encode({ active = false }),
+                        }
+
+                        local result, err = bkauth.verify_oauth2_access_token("fake-token")
+
+                        assert.is_nil(err)
+                        assert.is_false(result.active)
+                    end
+                )
+
+                it(
                     "should keep raw sub, username and client_id", function()
                         response = {
                             status = 200,

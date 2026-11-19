@@ -211,29 +211,23 @@ function _M.rewrite(conf, ctx) -- luacheck: no unused
     end
 
     local masked_token = mask_token(access_token)
-    local error_obj = errorx.new_general_unauthorized():with_field("token_hint", masked_token)
 
-    -- Verify the token via bkauth (with caching)
+    -- The cache resolves any usable fallback before returning a dependency error.
     local result, err = verify_token(access_token)
     if result == nil then
-        core.log.info("bk-oauth2-verify: token verification failed, token_hint=", masked_token, ", error=", err)
-
-        -- wrap it, it's an internal error
-        local error_message = "call bkauth api to verify token failed: " .. (err or "unknown error")
-        error_obj = error_obj:with_field("reason", error_message)
-        local www_auth = oauth2.build_www_authenticate_header(ctx, "invalid_token", error_message)
-        ngx.header["WWW-Authenticate"] = www_auth
-        return errorx.exit_with_apigw_err(ctx, error_obj, _M)
+        core.log.info("bk-oauth2-verify: introspection failed, token_hint=", masked_token, ", error=", err)
+        return errorx.exit_with_apigw_err(ctx, errorx.new_service_unavailable(), _M)
     end
 
-    if not result.active then
-        core.log.info("bk-oauth2-verify: token verification failed, token_hint=", masked_token, ", error=",
-                      result.error.message)
+    local error_obj = errorx.new_general_unauthorized():with_field("token_hint", masked_token)
+    if result.active == false then
+        core.log.info("bk-oauth2-verify: inactive token, token_hint=", masked_token,
+                      ", error_code=", string_field(result.error.code),
+                      ", error_message=", string_field(result.error.message))
 
-        local reason = result.error.message or "token verification failed, active=false"
+        local reason = "the access token is inactive"
         error_obj = error_obj:with_field("reason", reason)
-        local www_auth = oauth2.build_www_authenticate_header(ctx, result.error.code, reason)
-        ngx.header["WWW-Authenticate"] = www_auth
+        ngx.header["WWW-Authenticate"] = oauth2.build_www_authenticate_header(ctx, "invalid_token", reason)
         return errorx.exit_with_apigw_err(ctx, error_obj, _M)
     end
 
