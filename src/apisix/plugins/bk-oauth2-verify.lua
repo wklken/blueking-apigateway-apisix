@@ -217,16 +217,22 @@ function _M.rewrite(conf, ctx) -- luacheck: no unused
     local result, err = verify_token(access_token)
     if result == nil then
         core.log.info("bk-oauth2-verify: introspection failed, token_hint=", masked_token, ", error=", err)
-        return errorx.exit_with_apigw_err(ctx, errorx.new_service_unavailable(), _M)
+        local error_message = "call bkauth api to verify token failed: " .. (err or "unknown error")
+        local error_obj = errorx.new_service_unavailable():with_field("reason", error_message)
+        return errorx.exit_with_apigw_err(ctx, error_obj, _M)
     end
 
     local error_obj = errorx.new_general_unauthorized():with_field("token_hint", masked_token)
     if not result.active then
+        local error_message = string_field(result.error.message)
         core.log.info("bk-oauth2-verify: inactive token, token_hint=", masked_token,
                       ", error_code=", string_field(result.error.code),
-                      ", error_message=", string_field(result.error.message))
+                      ", error_message=", error_message)
 
         local reason = "the access token is inactive"
+        if error_message ~= "" then
+            reason = reason .. " [" .. error_message .. "]"
+        end
         error_obj = error_obj:with_field("reason", reason)
         ngx.header["WWW-Authenticate"] = oauth2.build_www_authenticate_header(ctx, "invalid_token", reason)
         return errorx.exit_with_apigw_err(ctx, error_obj, _M)

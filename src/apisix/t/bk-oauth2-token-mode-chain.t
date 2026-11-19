@@ -259,15 +259,15 @@ WWW-Authenticate: Bearer resource_metadata="[^"]+"
 --- no_error_log
 [error]
 
-=== TEST 12: inactive introspection uses a standard code and a generic explanation
+=== TEST 12: inactive introspection uses a standard code and includes the bkauth reason
 --- request
 GET /chain-app
 --- more_headers
 Authorization: Bearer tai_pat_inactive
 --- error_code: 401
 --- response_headers_like
-WWW-Authenticate: Bearer .*error="invalid_token", error_description="the access token is inactive"
---- response_body_like: ^(?!.*bkauth expired detail).*"code_name":"UNAUTHORIZED"
+WWW-Authenticate: Bearer .*error="invalid_token", error_description="the access token is inactive \[bkauth expired detail\]"
+--- response_body_like: ^(?=.*the access token is inactive \[bkauth expired detail\]).*"code_name":"UNAUTHORIZED"
 --- no_error_log
 [error]
 
@@ -279,6 +279,6 @@ Authorization: Bearer tai_pat_timeout
 --- error_code: 503
 --- response_headers
 WWW-Authenticate:
---- response_body_like: ^(?!.*bkauth request timeout).*"code_name":"SERVICE_UNAVAILABLE"
+--- response_body_like: ^(?=.*call bkauth api to verify token failed: bkauth request timeout).*"code_name":"SERVICE_UNAVAILABLE"
 --- error_log
-plugin exited with error. plugin_name: bk-oauth2-verify
+call bkauth api to verify token failed: bkauth request timeout

@@ -201,7 +201,10 @@ describe(
 
                         assert.is_equal(401, status)
                         assert.is_nil(ctx.var.bk_app)
-                        assert.matches('error="invalid_token"', www_authenticate_header)
+                        assert.matches(
+                            'error="invalid_token", error_description="the access token is inactive"$',
+                            www_authenticate_header
+                        )
                     end
                 )
 
