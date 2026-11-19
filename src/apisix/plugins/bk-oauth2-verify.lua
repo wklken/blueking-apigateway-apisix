@@ -212,6 +212,7 @@ function _M.rewrite(conf, ctx) -- luacheck: no unused
 
     local masked_token = mask_token(access_token)
 
+    -- Verify the token via bkauth (with caching)
     -- The cache resolves any usable fallback before returning a dependency error.
     local result, err = verify_token(access_token)
     if result == nil then
@@ -220,7 +221,7 @@ function _M.rewrite(conf, ctx) -- luacheck: no unused
     end
 
     local error_obj = errorx.new_general_unauthorized():with_field("token_hint", masked_token)
-    if result.active == false then
+    if not result.active then
         core.log.info("bk-oauth2-verify: inactive token, token_hint=", masked_token,
                       ", error_code=", string_field(result.error.code),
                       ", error_message=", string_field(result.error.message))

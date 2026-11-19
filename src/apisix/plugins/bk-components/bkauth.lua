@@ -24,7 +24,6 @@ local bk_components_utils = require("apisix.plugins.bk-components.utils")
 local string_format = string.format
 local table_insert = table.insert
 local ipairs = ipairs
-local type = type
 
 local VERIFY_APP_SECRET_URL = "/api/v1/apps/%s/access-keys/verify"
 local LIST_APP_SECRETS_URL = "/api/v1/apps/%s/access-keys"
@@ -240,10 +239,6 @@ function _M.verify_oauth2_access_token(access_token)
         return nil, err
     end
 
-    if type(result) ~= "table" or type(result.active) ~= "boolean" then
-        return nil, "bkauth introspection response is missing a boolean active field"
-    end
-
     -- {
     --     "active": true,
     --     "username": "tom",          // 蓝鲸用户 login_name
@@ -264,7 +259,7 @@ function _M.verify_oauth2_access_token(access_token)
     -- }
 
     local error = {}
-    if type(result.error) == "table" then
+    if result.error then
         error.code = result.error.code or ""
         error.message = result.error.message or ""
     end

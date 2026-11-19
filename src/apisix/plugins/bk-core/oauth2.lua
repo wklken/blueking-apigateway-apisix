@@ -82,43 +82,49 @@ local function escape_auth_header_value(value)
     return escaped
 end
 
-local function build_bearer_challenge(ctx)
-    local tmpl = config.get_bk_apigateway_api_tmpl()
-    local fallback = 'Bearer realm="bk-apigateway"'
-    if tmpl == nil or tmpl == "" then
-        return fallback
-    end
-
-    -- The template supports both subpath and subdomain gateway URLs.
-    local gateway_name = (ctx and ctx.var and ctx.var.bk_gateway_name) or "unknown"
-    local rendered_url = string_gsub(tmpl, "{api_name}", gateway_name)
-    local rendered_origin = string_match(rendered_url, "^(https?://[^/]+)")
-    if not rendered_origin then
-        return fallback
-    end
-
-    local path = (ctx and ctx.var and ctx.var.uri) or "/"
-    -- Some deployments rewrite subdomains to paths prefixed by /api/{gateway_name}.
-    if config.should_strip_subpath_prefix() then
-        path = strip_subpath_prefix(path, gateway_name)
-    end
-
-    local base_url = string_gsub(tmpl, "{api_name}", "bk-apigateway")
-    return string_format(
-        'Bearer resource_metadata="%s/prod/api/v2/open/.well-known/oauth-protected-resource?resource=%s"',
-        base_url,
-        ngx_escape_uri(rendered_origin .. path)
-    )
-end
-
-
 ---Build the WWW-Authenticate header value for OAuth2 discovery
 ---@param ctx table The current context object
 ---@param error_code string|nil The OAuth2 error code (e.g., "invalid_token", "invalid_request")
 ---@param error_description string|nil The human-readable error description
 ---@return string The WWW-Authenticate header value
 function _M.build_www_authenticate_header(ctx, error_code, error_description)
-    local challenge = build_bearer_challenge(ctx)
+    local tmpl = config.get_bk_apigateway_api_tmpl()
+
+    -- If tmpl is not configured (nil or empty) or has no valid origin, use a minimal challenge.
+    local challenge = 'Bearer realm="bk-apigateway"'
+    if tmpl ~= nil and tmpl ~= "" then
+        -- The tmpl can be in two formats:
+        -- - subpath: http://bkapi.example.com/api/{api_name}
+        -- - subdomain: http://{api_name}.bkapi.example.com
+
+        -- Step 1: Replace {api_name} with "bk-apigateway" to get the base URL
+        local base_url = string_gsub(tmpl, "{api_name}", "bk-apigateway")
+
+        -- Step 2: Extract scheme and domain (host) from the rendered URL to get the origin
+        -- Pattern matches: scheme://host (stops at first / after host or end of string)
+        local gateway_name = (ctx and ctx.var and ctx.var.bk_gateway_name) or "unknown"
+        local rendered_url = string_gsub(tmpl, "{api_name}", gateway_name)
+        local rendered_origin = string_match(rendered_url, "^(https?://[^/]+)")
+        if rendered_origin then
+            -- Step 3: Build the resource path and encode it
+            local path = (ctx and ctx.var and ctx.var.uri) or "/"
+
+            -- In some envs, nginx rewrites subdomain to subpath, so the path has an extra /api/{gateway_name} prefix
+            -- e.g. /api/bk-apigateway/prod/api/v2/... should be /prod/api/v2/...
+            if config.should_strip_subpath_prefix() then
+                path = strip_subpath_prefix(path, gateway_name)
+            end
+            local resource_url = rendered_origin .. path
+            local encoded_resource_url = ngx_escape_uri(resource_url)
+
+            challenge = string_format(
+                'Bearer resource_metadata="%s/prod/api/v2/open/.well-known/oauth-protected-resource?resource=%s"',
+                base_url,
+                encoded_resource_url
+            )
+        end
+    end
+
     if error_code and error_description then
         return challenge .. string_format(
             ', error="%s", error_description="%s"',

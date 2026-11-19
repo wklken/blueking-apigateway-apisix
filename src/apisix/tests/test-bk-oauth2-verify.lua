@@ -188,6 +188,24 @@ describe(
                 )
 
                 it(
+                    "should reject an introspection result without active", function()
+                        ctx.var.is_bk_oauth2 = true
+                        authorization_header = "Bearer example-token"
+                        cached_result = {
+                            exp = 4102444800,
+                            bk_app_code = "test-app",
+                            error = {},
+                        }
+
+                        local status = plugin.rewrite({}, ctx)
+
+                        assert.is_equal(401, status)
+                        assert.is_nil(ctx.var.bk_app)
+                        assert.matches('error="invalid_token"', www_authenticate_header)
+                    end
+                )
+
+                it(
                     "should return 401 when no token is present", function()
                         ctx.var.is_bk_oauth2 = true
                         authorization_header = nil
